@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr Glen Walton, artist and researcher</title>
+<meta name="description" content="Dr Glen Walton makes participatory artworks that invite strangers to play, make music and create together in public space. Founder of Playable Streets.">
+<meta property="og:title" content="Dr Glen Walton, artist and researcher">
+<meta property="og:description" content="Participatory artworks for streets, festivals and public spaces. Founder of Playable Streets.">
+<meta property="og:image" content="images/glen-portrait.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Glen Walton",
+  "honorificPrefix": "Dr",
+  "jobTitle": "Artist and researcher",
+  "email": "mailto:glen@playablestreets.com",
+  "worksFor": {"@type": "Organization", "name": "Playable Streets", "url": "https://www.playablestreets.com"},
+  "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Deakin University"}, {"@type": "CollegeOrUniversity", "name": "University of Technology Sydney"}],
+  "sameAs": ["https://www.playablestreets.com/about-artistic-director-glen-walton", "https://www.youtube.com/@playablestreets"]
+}
+</script>
+<style>
+:root{
+  --ground:#FBFAF7; --panel:#F2EFE9; --tile:#EFEBE4; --line:#E4DFD7;
+  --ink:#2B241E; --body:#4A4139; --muted:#6B6259; --clay:#8C4A2F; --moss:#4F5B2C;
+  --font:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --pad:clamp(20px,6vw,80px);
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%;display:block}
+a{color:var(--ink)}
+a:hover{color:var(--moss)}
+a:focus-visible{outline:3px solid var(--moss);outline-offset:3px;border-radius:4px}
+h1,h2,h3,p,figure{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:var(--pad)}
+.rule{border-top:1px solid var(--line)}
+
+/* header */
+.site-head{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-block:28px;border-bottom:1px solid var(--line)}
+.site-name{font-size:24px;font-weight:700;text-decoration:none;letter-spacing:-.01em}
+.site-nav{display:flex;gap:clamp(16px,3vw,36px);flex-wrap:wrap;font-weight:500}
+.site-nav a{text-decoration:none;padding-block:10px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:end;padding-block:clamp(48px,8vw,88px) clamp(56px,9vw,104px)}
+.hero h1{font-size:clamp(38px,5.2vw,66px);font-weight:600;line-height:1.03;letter-spacing:-.025em}
+.hero-text{display:flex;flex-direction:column;gap:32px}
+.lede{font-size:19px;line-height:1.6;color:var(--muted);max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--moss);border-color:var(--moss);color:#fff}
+.btn.primary:hover{background:#3D4622;border-color:#3D4622;color:#fff}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% center;border-radius:6px}
+figcaption{font-size:14px;color:var(--muted);margin-top:12px}
+
+/* sections */
+section{padding-block:clamp(64px,9vw,104px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+h2{font-size:clamp(36px,4.2vw,52px);font-weight:600;letter-spacing:-.02em;color:var(--moss);line-height:1.05}
+.sec-note{color:var(--muted);max-width:420px}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 32px}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none}
+.card img,.card .tile{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px}
+.card.feature{grid-column:span 2}
+.card.feature img{aspect-ratio:16/10}
+.card.tall img{aspect-ratio:auto;height:100%;min-height:0;flex:1}
+.card h3{font-size:23px;font-weight:600;line-height:1.2}
+.card.feature h3,.card.tall h3{font-size:26px}
+.card p{font-size:16px;color:var(--muted)}
+a.card:hover h3{text-decoration:underline;text-underline-offset:4px}
+.reel{background:var(--tile);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-size:15px}
+
+/* now and next */
+.split{display:grid;grid-template-columns:1fr 2fr;gap:32px}
+.split h2{font-size:30px}
+.list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.list li{display:flex;justify-content:space-between;gap:24px;padding-block:16px;border-top:1px solid var(--line);font-size:18px}
+.list span{color:var(--clay);white-space:nowrap}
+
+/* services */
+.offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.offer{background:var(--panel);padding:32px;border-radius:16px;display:flex;flex-direction:column;gap:10px}
+.offer h3{font-size:24px;font-weight:600}
+.offer p{color:var(--muted)}
+
+/* research */
+.thesis{display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:end;margin-bottom:48px}
+.thesis-title{font-size:clamp(24px,2.8vw,34px);font-style:italic;line-height:1.2;margin-block:22px}
+.thesis-meta{font-size:18px;line-height:1.6;color:var(--muted);max-width:680px}
+.thesis .actions{justify-content:flex-end}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 64px;border-top:1px solid var(--line);padding-top:48px}
+.cols h3{font-size:20px;font-weight:600;color:var(--clay);margin-bottom:14px}
+.cols p{font-size:16px;line-height:1.55;color:var(--body);margin-bottom:14px}
+
+/* likes */
+.tile{display:flex;align-items:flex-end;padding:20px;font-size:15px;font-weight:600}
+.t-moss{background:#DDE0CF;color:#3E4722}
+.t-clay{background:#EBD7CB;color:#7A3F27}
+.t-slate{background:#D9E0E3;color:#34495A}
+.t-stone{background:#E6E1D8;color:#4A4139}
+
+/* footer */
+.site-foot{background:var(--panel);border-top:1px solid var(--line);padding-block:clamp(64px,9vw,96px) 48px}
+.site-foot h2{color:var(--ink);font-size:clamp(38px,5vw,60px);margin-bottom:28px}
+.email{font-size:clamp(20px,2.4vw,24px);color:var(--moss)}
+.links{display:flex;gap:28px;flex-wrap:wrap;margin-block:28px}
+.fine{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;font-size:15px;color:var(--muted);padding-top:32px;border-top:1px solid var(--line)}
+
+@media (max-width:900px){
+  .hero,.thesis,.split{grid-template-columns:1fr}
+  .hero figure{max-width:520px}
+  .thesis .actions{justify-content:flex-start}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card.tall img{aspect-ratio:3/2;height:auto}
+}
+@media (max-width:600px){
+  .grid,.offers,.cols{grid-template-columns:1fr}
+  .card.feature{grid-column:auto}
+  .card.feature img{aspect-ratio:3/2}
+  .list li{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="site-head">
+<a href="#top" class="site-name">Dr Glen Walton</a>
+<nav class="site-nav" aria-label="Main">
+<a href="#work">Work</a>
+<a href="#research">Research</a>
+<a href="#likes">Things I like</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<main id="top">
+<div class="hero">
+<div class="hero-text">
+<h1>I make participatory artworks that invite strangers to play, make music and create together in public space.</h1>
+<p class="lede">I founded Playable Streets in 2015 and have grown it into an international company touring a repertoire of works to festivals, councils and cultural venues. I'm a cofounder of The Suitcase Royale, a long time collaborator with Polyglot Theatre, and recently completed a practice based PhD on the role of the creative facilitator.</p>
+<div class="actions">
+<a class="btn primary" href="#work">See the work</a>
+<a class="btn" href="glen-walton-cv.pdf">Download CV</a>
+</div>
+</div>
+<figure>
+<img src="images/glen-portrait.jpg" alt="Glen Walton holding a large potted fern at an outdoor festival site" width="1072" height="733">
+<figcaption>The Musical Plants at March On festival, Esplanade, Singapore, 2024</figcaption>
+</figure>
+</div>
+
+<section id="work" class="rule">
+<div class="sec-head">
+<h2>Work</h2>
+<p class="sec-note">Each work opens its full page on Playable Streets.</p>
+</div>
+<div class="grid">
+<a class="card feature" href="https://www.playablestreets.com/the-musical-plants">
+<img src="images/musical-plants.jpg" alt="A child lifted up to touch a plant in a wooden pot while a facilitator watches" loading="lazy">
+<h3>The Musical Plants</h3>
+<p>Living plants become instruments that play when you touch them. Toured to Singapore, Seoul, Busan and festivals across Australia since 2016.</p>
+</a>
+<a class="card tall" href="https://www.playablestreets.com/coldvoice">
+<img src="images/coldvoice.jpg" alt="Visitors playing an ice instrument outside Arts Centre Melbourne" loading="lazy">
+<h3>ColdVoice</h3>
+<p>An instrument made of ice that plays field recordings from Alaskan glaciers.</p>
+</a>
+<a class="card" href="https://www.playablestreets.com/reflection">
+<img src="images/reflection.jpg" alt="People drawing on bright coloured mirror panels at Federation Square" loading="lazy">
+<h3>Reflection</h3>
+<p>Coloured mirrors people draw and write on, glowing under ultraviolet light at night.</p>
+</a>
+<a class="card" href="https://www.playablestreets.com/duet-arts">
+<img src="images/duet-arts.jpg" alt="An aged care resident and an artist making music together through touch" loading="lazy">
+<h3>Duet Arts</h3>
+<p>Music making through touch with aged care residents, many living with dementia.</p>
+</a>
+<a class="card" href="https://www.playablestreets.com/exquisite-stories">
+<img src="images/exquisite-stories.jpg" alt="Children drawing at a workshop table covered in coloured paper" loading="lazy">
+<h3>Exquisite Stories</h3>
+<p>Children's drawings become an installation of new characters with real recorded voices.</p>
+</a>
+<a class="card" href="https://www.playablestreets.com/reach-out-sounds">
+<img src="images/reach-out-sounds.jpg" alt="A woman high fiving two children in front of a street mural" loading="lazy">
+<h3>Reach Out Sounds</h3>
+<p>Reach out and connect with each other to make music.</p>
+</a>
+<a class="card" href="https://www.playablestreets.com/clippy">
+<img src="images/clippy.jpg" alt="Students around a table wiring everyday objects to a glowing green circuit" loading="lazy">
+<h3>CLIPPY</h3>
+<p>A kit that makes anything playable, used in school workshops.</p>
+</a>
+<a class="card" href="https://www.youtube.com/@playablestreets">
+<div class="tile reel">
+<svg width="60" height="60" viewBox="0 0 88 88" fill="none" stroke="#2B241E" stroke-width="2.5" aria-hidden="true"><circle cx="44" cy="44" r="42"/><path d="M36 30 L60 44 L36 58 Z"/></svg>
+Watch on YouTube
+</div>
+<h3>Showreel</h3>
+<p>Videos of the work on the Playable Streets YouTube channel.</p>
+</a>
+</div>
+</section>
+
+<section class="split" aria-labelledby="next-h">
+<h2 id="next-h">Now and next</h2>
+<ul class="list">
+<li>Plant Sonata, a long term commission at Changi Airport, Singapore <span>Since 2025</span></li>
+<li>Children's Biennale, National Gallery Singapore <span>2027 to 2028</span></li>
+<li>Creative Facilitator Summit, ArtPlay and Arts Centre Melbourne <span>2027</span></li>
+<li>ColdVoice Monoliths and Kite Choir <span>In development</span></li>
+</ul>
+</section>
+
+<section id="services" class="rule">
+<h2 style="margin-bottom:40px">Work with me</h2>
+<div class="offers">
+<div class="offer"><h3>Participatory artworks</h3><p>Commissioned and touring works for streets, festivals, precincts and cultural venues.</p></div>
+<div class="offer"><h3>Community engagement through play</h3><p>Engagement processes that invite people in through making and playing together.</p></div>
+<div class="offer"><h3>Facilitation training</h3><p>Workshops for artists, educators and council teams, drawn from my doctoral research.</p></div>
+<div class="offer"><h3>Research partnerships</h3><p>Collaborations with universities and organisations on participation, play and public space.</p></div>
+</div>
+</section>
+
+<section id="research" class="rule">
+<div class="thesis">
+<div>
+<h2>Research</h2>
+<p class="thesis-title">The Creative Facilitator: Practices within Outdoor Participatory Performance</p>
+<p class="thesis-meta">PhD, Faculty of Arts and Education, Deakin University, 2026. Through case studies, fieldwork and the making of ColdVoice, this research theorises creative facilitation as a distinct practice. Supervised by Dr Rea Dennis.</p>
+</div>
+<div class="actions">
+<a class="btn primary" href="glen-walton-cv.pdf">Download full CV (PDF)</a>
+</div>
+</div>
+<div class="cols">
+<div>
+<h3>Publications</h3>
+<p>Walton, G. (2026). <em>The creative facilitator: Practices within outdoor participatory performance</em> [Doctoral thesis, Deakin University].</p>
+<p>Walton, G., Greuter, S., &amp; Dennis, R. (2022). Exploring participant interaction with interpersonal touch musical interfaces. In <em>Designing Interactive Systems Conference</em> (pp. 28–31).</p>
+<p>O'Neil, M., Austin, H., Borthwick, C., Macindoe, A., Saulwick, T., &amp; Walton, G. (2022). Sonic touch: Charting connections in contemporary sound-led performance practice. <em>Performance Research, 27</em>(2), 64–71.</p>
+<p>Walton, G. (2018). <em>Designing interactive touch-based musical installations</em> [Master's thesis, University of Technology Sydney].</p>
+</div>
+<div>
+<h3>Talks</h3>
+<p><em>The bridge to bring people in</em>, ASSITEJ Singapore</p>
+<p><em>Strangers as collaborators</em>, Pervasive Media Studio, Bristol</p>
+<p><em>Interactive technologies for musical collaboration</em>, Technische Universität Berlin and SensiLab, Monash University</p>
+<p><em>Sound, Touch and Technology: New Pathways to Well-Being in Aged Care</em>, ACRL, Melbourne</p>
+</div>
+<div>
+<h3>Teaching and mentoring</h3>
+<p>Lecturer, Creative Technologies in Theatre, Deakin University, 2021 and 2022</p>
+<p>Mentor, Creative Workers in Schools, Regional Arts Victoria, 2021</p>
+<p>Interns hosted from RMIT, Deakin, VCA and Design Academy Eindhoven</p>
+</div>
+<div>
+<h3>Residencies, delegations and awards</h3>
+<p>Children's Theatre Alliance delegate, Hong Kong, 2026</p>
+<p>Pervasive Media Studio, Bristol, and Australian delegate, Ars Electronica, Linz, 2018</p>
+<p>Green Room Award for Innovation in Contemporary Performance for Young People, 2016, for Separation Street</p>
+</div>
+</div>
+</section>
+
+<section id="likes" class="rule">
+<div class="sec-head">
+<h2>Things I like</h2>
+<p class="sec-note">Artists, projects and ideas that shape how I work.</p>
+</div>
+<div class="grid">
+<a class="card" href="https://en.wikipedia.org/wiki/Groupe_de_Recherche_d%27Art_Visuel">
+<div class="tile t-moss">Art movement</div>
+<h3>GRAV</h3>
+<p>Participatory art in Paris in the 1960s</p>
+</a>
+<div class="card">
+<div class="tile t-clay">Novel</div>
+<h3>The Trees by Percival Everett</h3>
+</div>
+<div class="card">
+<div class="tile t-slate">Theatre</div>
+<h3>Bloomshed</h3>
+<p>Naarm based theatre company adapting classics in a perfectly twisted way</p>
+</div>
+<div class="card">
+<div class="tile t-stone">Album</div>
+<h3>The Grand Magoozi</h3>
+<p>Ten years was worth the wait for this new album</p>
+</div>
+<a class="card" href="https://500songs.com">
+<div class="tile t-moss">Podcast</div>
+<h3>A History of Rock Music in 500 Songs</h3>
+<p>An epically ambitious podcast!</p>
+</a>
+<div class="card">
+<div class="tile t-clay">Coffee</div>
+<h3>Little Rebel Coffee</h3>
+<p>Best batch brew coffee in Dromana</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+
+<footer id="contact" class="site-foot">
+<div class="wrap">
+<h2>Let's make something together</h2>
+<a class="email" href="mailto:glen@playablestreets.com">glen@playablestreets.com</a>
+<nav class="links" aria-label="Elsewhere">
+<a href="https://www.playablestreets.com">Playable Streets</a>
+<a href="https://www.youtube.com/@playablestreets">YouTube</a>
+<a href="https://podcasts.apple.com/au/podcast/ps-playcast/id1851168137">PS Playcast</a>
+<a href="https://www.instagram.com/playablestreets/">Instagram</a>
+</nav>
+<div class="fine">
+<span>I live, work and play on the lands of the Bunurong people. Always was, always will be Aboriginal land.</span>
+<span>© 2026 Glen Walton</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
